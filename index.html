@@ -1,0 +1,302 @@
+<!-- index.html - Ultra-Unique Cyberpunk Glass Portfolio for Ryan Romano -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Ryan Romano | CyberForge Portfolio</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="portfolio.css">
+  <!-- Google Fonts: Space Grotesk + Orbitron + JetBrains Mono -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Three.js for 3D Background -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.128.0/build/three.module.js"
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="cyber-bg antialiased overflow-x-hidden">
+
+  <!-- 3D Canvas Background -->
+  <canvas id="bgCanvas" class="fixed top-0 left-0 w-full h-full -z-10"></canvas>
+
+  <!-- Navigation - Cyber Glass -->
+  <nav class="fixed top-0 left-0 w-full z-50 cyber-glass border-b border-cyan-500/40 backdrop-blur-xl bg-black/40 py-3 px-6 md:px-12">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <a href="#" class="font-['Orbitron'] text-2xl font-bold tracking-wider">
+        <span class="text-cyan-400">RYAN</span><span class="text-white">FRANCIS.ROMANO</span>
+        <span class="text-xs text-cyan-500 ml-1">[DEV]</span>
+      </a>
+      <div class="hidden md:flex space-x-8 font-['Space_Grotesk'] font-medium">
+        <a href="#home" class="nav-link-cyber text-gray-300 hover:text-cyan-400 transition">[HOME]</a>
+        <a href="#about" class="nav-link-cyber text-gray-300 hover:text-cyan-400 transition">[ABOUT]</a>
+        <a href="#projects" class="nav-link-cyber text-gray-300 hover:text-cyan-400 transition">[PROJECTS]</a>
+        <a href="#tech" class="nav-link-cyber text-gray-300 hover:text-cyan-400 transition">[TECH]</a>
+        <a href="#contact" class="nav-link-cyber text-gray-300 hover:text-cyan-400 transition">[CONTACT]</a>
+      </div>
+      <button id="mobileMenuBtn" class="md:hidden text-cyan-400 focus:outline-none">
+        <i data-lucide="menu" class="w-7 h-7"></i>
+      </button>
+    </div>
+    <div id="mobileMenu" class="mobile-menu-cyber hidden flex-col mt-4 space-y-3 pb-3 md:hidden bg-black/90 backdrop-blur-xl rounded-xl px-4 py-3 border border-cyan-500/40">
+      <a href="#home" class="py-2 text-gray-300 hover:text-cyan-400 transition font-['Space_Grotesk']">[HOME]</a>
+      <a href="#about" class="py-2 text-gray-300 hover:text-cyan-400 transition font-['Space_Grotesk']">[ABOUT]</a>
+      <a href="#projects" class="py-2 text-gray-300 hover:text-cyan-400 transition font-['Space_Grotesk']">[PROJECTS]</a>
+      <a href="#tech" class="py-2 text-gray-300 hover:text-cyan-400 transition font-['Space_Grotesk']">[TECH]</a>
+      <a href="#contact" class="py-2 text-gray-300 hover:text-cyan-400 transition font-['Space_Grotesk']">[CONTACT]</a>
+    </div>
+  </nav>
+
+  <main class="pt-20 relative z-10">
+    <!-- HERO Section - Terminal Style -->
+    <section id="home" class="min-h-screen flex flex-col justify-center items-center px-6 py-16">
+      <div class="max-w-6xl mx-auto text-center">
+        <div class="mb-6 inline-block cyber-pill px-5 py-2">
+          <span class="text-cyan-400 font-['JetBrains_Mono'] text-sm">✦ SYSTEM_STATUS: ACTIVE ✦</span>
+        </div>
+        <div class="terminal-text mb-6">
+          <span class="text-cyan-400">$></span>
+          <span class="text-white text-2xl md:text-3xl font-['JetBrains_Mono']"> whoami</span>
+        </div>
+        <h1 class="font-['Orbitron'] text-5xl md:text-7xl font-black leading-tight">
+          <span class="bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent animate-gradient">Ryan Francis Romano</span>
+        </h1>
+        <div class="terminal-text mt-4">
+          <span class="text-cyan-400">$></span>
+          <span class="text-gray-300 text-xl md:text-2xl font-['JetBrains_Mono']"> cat role.txt</span>
+        </div>
+        <p class="text-gray-300 text-lg mt-4 max-w-2xl mx-auto font-['Space_Grotesk']">
+          [ LEAD RESEARCHER & FULL-STACK ARCHITECT ]<br>
+          <span class="text-cyan-400">// Building digital ecosystems with precision</span>
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 mt-10">
+          <a href="#projects" class="cyber-btn px-8 py-3 rounded-full font-['Orbitron'] tracking-wide">VIEW_DEPLOYMENTS.exe</a>
+          <a href="#contact" class="cyber-btn-outline px-8 py-3 rounded-full font-['Orbitron'] tracking-wide">INITIATE_CONTACT</a>
+        </div>
+        <!-- Animated scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+          <div class="scroll-indicator">
+            <span class="text-cyan-400 text-xs font-['JetBrains_Mono']">▼ SCROLL ▼</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section - Hologram Card Style -->
+    <section id="about" class="px-6 md:px-12 py-20 relative">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <div class="inline-block cyber-pill px-4 py-1 mb-4">
+            <span class="text-cyan-400 text-sm font-['JetBrains_Mono']">[ SYSTEM_IDENTITY ]</span>
+          </div>
+          <h2 class="font-['Orbitron'] text-4xl md:text-5xl font-bold text-white">// ABOUT_ME</h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Identity Matrix -->
+          <div class="cyber-card rounded-2xl p-6 md:p-8">
+            <div class="flex items-center gap-2 mb-5">
+              <i data-lucide="cpu" class="w-6 h-6 text-cyan-400"></i>
+              <h3 class="font-['Orbitron'] text-xl text-cyan-400">> IDENTITY_MATRIX</h3>
+            </div>
+            <div class="space-y-3 font-['JetBrains_Mono'] text-sm">
+              <div class="flex justify-between border-b border-cyan-500/30 pb-2"><span class="text-gray-400">[NAME]</span><span class="text-white">Ryan Francis C. Romano</span></div>
+              <div class="flex justify-between border-b border-cyan-500/30 pb-2"><span class="text-gray-400">[LOCATION]</span><span class="text-white">Camarines Norte, PH</span></div>
+              <div class="flex justify-between border-b border-cyan-500/30 pb-2"><span class="text-gray-400">[DEGREE]</span><span class="text-white">BS Computer Science</span></div>
+              <div class="flex justify-between border-b border-cyan-500/30 pb-2"><span class="text-gray-400">[INSTITUTION]</span><span class="text-white">Mabini Colleges, Inc.</span></div>
+              <div class="flex justify-between"><span class="text-gray-400">[EXPECTED]</span><span class="text-cyan-400">2026</span></div>
+            </div>
+          </div>
+          <!-- Stats Terminal -->
+          <div class="cyber-card rounded-2xl p-6 md:p-8">
+            <div class="flex items-center gap-2 mb-5">
+              <i data-lucide="terminal" class="w-6 h-6 text-cyan-400"></i>
+              <h3 class="font-['Orbitron'] text-xl text-cyan-400">> STATS.exe</h3>
+            </div>
+            <div class="space-y-4">
+              <div><div class="flex justify-between text-sm font-['JetBrains_Mono']"><span class="text-gray-400">FULL-STACK_DEV</span><span class="text-cyan-400">92%</span></div><div class="w-full h-2 bg-gray-800 rounded-full mt-1"><div class="h-full w-[92%] bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full"></div></div></div>
+              <div><div class="flex justify-between text-sm font-['JetBrains_Mono']"><span class="text-gray-400">UI/UX_DESIGN</span><span class="text-cyan-400">88%</span></div><div class="w-full h-2 bg-gray-800 rounded-full mt-1"><div class="h-full w-[88%] bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full"></div></div></div>
+              <div><div class="flex justify-between text-sm font-['JetBrains_Mono']"><span class="text-gray-400">PM_SKILLS</span><span class="text-cyan-400">84%</span></div><div class="w-full h-2 bg-gray-800 rounded-full mt-1"><div class="h-full w-[84%] bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full"></div></div></div>
+              <div><div class="flex justify-between text-sm font-['JetBrains_Mono']"><span class="text-gray-400">DB_INTEGRATION</span><span class="text-cyan-400">90%</span></div><div class="w-full h-2 bg-gray-800 rounded-full mt-1"><div class="h-full w-[90%] bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full"></div></div></div>
+            </div>
+          </div>
+        </div>
+        <!-- Bio Terminal -->
+        <div class="cyber-card rounded-2xl p-6 mt-8">
+          <div class="flex items-center gap-2 mb-4">
+            <i data-lucide="file-code" class="w-5 h-5 text-cyan-400"></i>
+            <span class="text-cyan-400 font-['JetBrains_Mono'] text-sm">$> cat biography.txt</span>
+          </div>
+          <p class="text-gray-300 leading-relaxed font-['Space_Grotesk']">
+            Fourth-year Computer Science student with deep expertise in software development, web technologies, and UI/UX design. 
+            My journey spans programming, database management, and systems analysis — driven by building practical solutions that improve efficiency. 
+            I've led projects as a full-stack solo developer and collaborated in agile teams, always striving for clean architecture and seamless user experiences.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section - Neon Grid -->
+    <section id="projects" class="px-6 md:px-12 py-20 bg-black/30">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <div class="inline-block cyber-pill px-4 py-1 mb-4">
+            <span class="text-cyan-400 text-sm font-['JetBrains_Mono']">[ DEPLOYMENTS ]</span>
+          </div>
+          <h2 class="font-['Orbitron'] text-4xl md:text-5xl font-bold text-white">// ACTIVE_PROJECTS</h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Project 1 -->
+          <div class="cyber-card-holo rounded-2xl overflow-hidden group">
+            <div class="h-48 bg-gradient-to-br from-cyan-900/40 to-purple-900/40 flex items-center justify-center relative">
+              <div class="absolute inset-0 flex items-center justify-center">
+                <i data-lucide="package" class="w-16 h-16 text-cyan-400 opacity-60 group-hover:scale-110 transition duration-500"></i>
+              </div>
+              <div class="absolute bottom-2 right-3 text-cyan-400 text-xs font-['JetBrains_Mono']">v1.0.0</div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-['Orbitron'] text-xl font-bold text-cyan-400">UPITDC Inventory System</h3>
+              <p class="text-gray-300 text-sm mt-2 font-['Space_Grotesk']">Web-based inventory management system for UPITDC (University of the Philippines) — full-stack solo development.</p>
+              <div class="flex flex-wrap gap-2 mt-4">
+                <span class="tech-tag">Laravel</span><span class="tech-tag">Blade</span><span class="tech-tag">MySQL</span><span class="tech-tag">PHP</span>
+              </div>
+              <div class="mt-4 text-xs text-cyan-500 font-['JetBrains_Mono']">[ ROLE: FULL-STACK_DEV ]</div>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div class="cyber-card-holo rounded-2xl overflow-hidden group">
+            <div class="h-48 bg-gradient-to-br from-purple-900/40 to-cyan-900/40 flex items-center justify-center relative">
+              <i data-lucide="calendar" class="w-16 h-16 text-cyan-400 opacity-60 group-hover:scale-110 transition duration-500"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="font-['Orbitron'] text-xl font-bold text-cyan-400">Balane-Saspa Dental System</h3>
+              <p class="text-gray-300 text-sm mt-2">Online appointment scheduling system — streamlining patient bookings and clinic workflow.</p>
+              <div class="flex flex-wrap gap-2 mt-4">
+                <span class="tech-tag">Express.js</span><span class="tech-tag">Supabase</span><span class="tech-tag">Tailwind</span>
+              </div>
+              <div class="mt-4 text-xs text-cyan-500 font-['JetBrains_Mono']">[ ROLE: PM & LEAD_DEV ]</div>
+            </div>
+          </div>
+          <!-- Project 3 -->
+          <div class="cyber-card-holo rounded-2xl overflow-hidden group">
+            <div class="h-48 bg-gradient-to-br from-blue-900/40 to-cyan-900/40 flex items-center justify-center">
+              <i data-lucide="users" class="w-16 h-16 text-cyan-400 opacity-60 group-hover:scale-110 transition duration-500"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="font-['Orbitron'] text-xl font-bold text-cyan-400">Student Management System</h3>
+              <p class="text-gray-300 text-sm mt-2">Desktop application for organizing and managing student records and academic data.</p>
+              <div class="flex flex-wrap gap-2 mt-4">
+                <span class="tech-tag">Java</span><span class="tech-tag">MySQL</span><span class="tech-tag">JDBC</span>
+              </div>
+              <div class="mt-4 text-xs text-cyan-500 font-['JetBrains_Mono']">[ ROLE: SOLO_DEV ]</div>
+            </div>
+          </div>
+          <!-- Project 4 -->
+          <div class="cyber-card-holo rounded-2xl overflow-hidden group">
+            <div class="h-48 bg-gradient-to-br from-emerald-900/40 to-cyan-900/40 flex items-center justify-center">
+              <i data-lucide="sprout" class="w-16 h-16 text-cyan-400 opacity-60 group-hover:scale-110 transition duration-500"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="font-['Orbitron'] text-xl font-bold text-cyan-400">Agri-Bit Mobile</h3>
+              <p class="text-gray-300 text-sm mt-2">Mobile app supporting farmers with crop development insights and agricultural monitoring.</p>
+              <div class="flex flex-wrap gap-2 mt-4">
+                <span class="tech-tag">Kotlin</span><span class="tech-tag">Android Studio</span><span class="tech-tag">Supabase</span>
+              </div>
+              <div class="mt-4 text-xs text-cyan-500 font-['JetBrains_Mono']">[ ROLE: CRDO ]</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack Section - Glowing Icons -->
+    <section id="tech" class="px-6 md:px-12 py-20">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <div class="inline-block cyber-pill px-4 py-1 mb-4">
+            <span class="text-cyan-400 text-sm font-['JetBrains_Mono']">[ TOOLCHAIN ]</span>
+          </div>
+          <h2 class="font-['Orbitron'] text-4xl md:text-5xl font-bold text-white">// TECH_STACK</h2>
+        </div>
+        <div class="cyber-card rounded-2xl p-8">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div class="tech-icon-group"><i data-lucide="code-2" class="w-10 h-10 text-cyan-400 mx-auto mb-2"></i><p class="text-white text-sm font-['Orbitron']">PHP / Java</p><p class="text-gray-500 text-xs">Core Languages</p></div>
+            <div class="tech-icon-group"><i data-lucide="globe" class="w-10 h-10 text-cyan-400 mx-auto mb-2"></i><p class="text-white text-sm font-['Orbitron']">Laravel / React</p><p class="text-gray-500 text-xs">Frameworks</p></div>
+            <div class="tech-icon-group"><i data-lucide="database" class="w-10 h-10 text-cyan-400 mx-auto mb-2"></i><p class="text-white text-sm font-['Orbitron']">MySQL / Supabase</p><p class="text-gray-500 text-xs">Databases</p></div>
+            <div class="tech-icon-group"><i data-lucide="git-branch" class="w-10 h-10 text-cyan-400 mx-auto mb-2"></i><p class="text-white text-sm font-['Orbitron']">Git / GitHub</p><p class="text-gray-500 text-xs">Version Control</p></div>
+          </div>
+          <div class="border-t border-cyan-500/30 mt-8 pt-6">
+            <div class="flex flex-wrap justify-center gap-3">
+              <span class="tech-tag-lg">TypeScript</span><span class="tech-tag-lg">Node.js</span><span class="tech-tag-lg">Express</span>
+              <span class="tech-tag-lg">Tailwind</span><span class="tech-tag-lg">Figma</span><span class="tech-tag-lg">Python</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Matrix -->
+    <section class="px-6 md:px-12 py-20 bg-black/30">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-10">
+          <div class="inline-block cyber-pill px-4 py-1 mb-4">
+            <span class="text-cyan-400 text-sm font-['JetBrains_Mono']">[ VALIDATIONS ]</span>
+          </div>
+          <h2 class="font-['Orbitron'] text-3xl md:text-4xl font-bold text-white">// CERTIFICATIONS</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-5">
+          <div class="cyber-card p-4 text-center"><i data-lucide="award" class="w-8 h-8 text-cyan-400 mx-auto mb-2"></i><p class="text-sm font-['JetBrains_Mono'] text-white">1st Runner-up<br>System Dev Awards '24</p></div>
+          <div class="cyber-card p-4 text-center"><i data-lucide="cpu" class="w-8 h-8 text-cyan-400 mx-auto mb-2"></i><p class="text-sm font-['JetBrains_Mono'] text-white">Computer System<br>Servicing NC II</p></div>
+          <div class="cyber-card p-4 text-center"><i data-lucide="palette" class="w-8 h-8 text-cyan-400 mx-auto mb-2"></i><p class="text-sm font-['JetBrains_Mono'] text-white">Visual Graphic<br>Design NC III</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section - Terminal Form -->
+    <section id="contact" class="px-6 md:px-12 py-20">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-10">
+          <div class="inline-block cyber-pill px-4 py-1 mb-4">
+            <span class="text-cyan-400 text-sm font-['JetBrains_Mono']">[ ESTABLISH_CONNECTION ]</span>
+          </div>
+          <h2 class="font-['Orbitron'] text-4xl md:text-5xl font-bold text-white">// CONTACT</h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="cyber-card rounded-2xl p-6 md:p-8">
+            <div class="mb-4 flex items-center gap-2"><i data-lucide="terminal" class="w-5 h-5 text-cyan-400"></i><span class="text-cyan-400 font-['JetBrains_Mono'] text-sm">$> send_message --to="Ryan"</span></div>
+            <form id="contactForm" class="space-y-5">
+              <div><input type="text" id="name" placeholder="[USERNAME]" required class="input-cyber w-full rounded-lg px-4 py-3 font-['JetBrains_Mono'] text-sm"></div>
+              <div><input type="email" id="email" placeholder="[EMAIL]" required class="input-cyber w-full rounded-lg px-4 py-3 font-['JetBrains_Mono'] text-sm"></div>
+              <div><textarea id="message" rows="4" placeholder="[MESSAGE]" required class="input-cyber w-full rounded-lg px-4 py-3 font-['JetBrains_Mono'] text-sm resize-none"></textarea></div>
+              <button type="submit" class="cyber-btn w-full py-3 rounded-lg font-['Orbitron'] flex items-center justify-center gap-2">SEND_MESSAGE.exe <i data-lucide="send" class="w-4 h-4"></i></button>
+              <p id="formFeedback" class="text-xs text-center text-cyan-400 hidden font-['JetBrains_Mono']"></p>
+            </form>
+          </div>
+          <div class="cyber-card rounded-2xl p-6 md:p-8">
+            <div class="mb-4 flex items-center gap-2"><i data-lucide="network" class="w-5 h-5 text-cyan-400"></i><span class="text-cyan-400 font-['JetBrains_Mono'] text-sm">$> scan_connections</span></div>
+            <div class="space-y-4">
+              <a href="mailto:ahyanromano02@gmail.com" class="flex items-center gap-3 p-3 cyber-card-holo rounded-lg group"><i data-lucide="mail" class="w-5 h-5 text-cyan-400"></i><span class="text-gray-300 group-hover:text-cyan-400 transition">ahyanromano02@gmail.com</span></a>
+              <a href="https://github.com/Ahyan3" target="_blank" class="flex items-center gap-3 p-3 cyber-card-holo rounded-lg group"><i data-lucide="github" class="w-5 h-5 text-cyan-400"></i><span class="text-gray-300 group-hover:text-cyan-400 transition">github.com/Ahyan3</span></a>
+              <a href="https://linkedin.com/in/ahyan-romano-ph" target="_blank" class="flex items-center gap-3 p-3 cyber-card-holo rounded-lg group"><i data-lucide="linkedin" class="w-5 h-5 text-cyan-400"></i><span class="text-gray-300 group-hover:text-cyan-400 transition">linkedin.com/in/ahyan-romano-ph</span></a>
+              <a href="https://ahyanportfolio.netlify.app" target="_blank" class="flex items-center gap-3 p-3 cyber-card-holo rounded-lg group"><i data-lucide="globe" class="w-5 h-5 text-cyan-400"></i><span class="text-gray-300 group-hover:text-cyan-400 transition">ahyanportfolio.netlify.app</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-cyan-500/30 py-6 text-center text-gray-500 text-sm bg-black/50">
+      <p class="font-['JetBrains_Mono']">© 2025 Ryan Romano — [ CYBERFORGE_BUILD_v2.0 ] | <span class="text-cyan-400">// ALWAYS_LEARNING</span></p>
+    </footer>
+  </main>
+
+  <script type="module" src="portfolio.js"></script>
+  <script nomodule src="portfolio-fallback.js"></script>
+</body>
+</html>
