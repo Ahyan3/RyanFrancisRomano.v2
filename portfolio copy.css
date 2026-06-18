@@ -1,0 +1,244 @@
+/* portfolio.css - Cyberpunk / Glitch / Neon Theme for Ryan Romano */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #05050a;
+  color: #e0e0e0;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Cyber Background with animated grid */
+.cyber-bg {
+  position: relative;
+  background: radial-gradient(circle at 20% 30%, #0a0a1a, #030308);
+}
+
+/* 3D Canvas Background */
+#bgCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+/* Cyber Glass Navigation */
+.cyber-glass {
+  background: rgba(5, 5, 15, 0.75);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 255, 255, 0.3);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+}
+
+/* Navigation Links Cyber Style */
+.nav-link-cyber {
+  position: relative;
+  transition: all 0.2s;
+  letter-spacing: 1px;
+}
+
+.nav-link-cyber::before {
+  content: '[';
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.nav-link-cyber::after {
+  content: ']';
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.nav-link-cyber:hover::before,
+.nav-link-cyber:hover::after {
+  opacity: 1;
+}
+
+/* Cyber Card - Main Container */
+.cyber-card {
+  background: rgba(8, 12, 25, 0.75);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.05);
+}
+
+.cyber-card:hover {
+  border-color: #00ffff;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+  transform: translateY(-4px);
+}
+
+/* Holographic Card Variant */
+.cyber-card-holo {
+  background: linear-gradient(135deg, rgba(8, 12, 35, 0.8), rgba(15, 8, 35, 0.7));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.cyber-card-holo:hover {
+  border-color: #00ffff;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.25);
+  transform: translateY(-5px) scale(1.01);
+}
+
+/* Cyber Pill Badge */
+.cyber-pill {
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.4);
+  border-radius: 50px;
+  display: inline-block;
+  backdrop-filter: blur(4px);
+}
+
+/* Neon Button */
+.cyber-btn {
+  background: linear-gradient(95deg, #00a3a3, #00ffff);
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.5);
+  transition: all 0.25s ease;
+  color: #000;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.cyber-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px #00ffff;
+  filter: brightness(1.08);
+}
+
+/* Outline Button */
+.cyber-btn-outline {
+  background: transparent;
+  border: 1.5px solid #00ffff;
+  color: #00ffff;
+  transition: all 0.25s ease;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.cyber-btn-outline:hover {
+  background: rgba(0, 255, 255, 0.15);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  transform: scale(1.02);
+}
+
+/* Input Fields Cyber */
+.input-cyber {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(0, 255, 255, 0.4);
+  transition: all 0.2s;
+  color: #00ffff;
+}
+
+.input-cyber:focus {
+  outline: none;
+  border-color: #00ffff;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.input-cyber::placeholder {
+  color: #4a6a7a;
+}
+
+/* Tech Tags */
+.tech-tag {
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-family: 'JetBrains Mono', monospace;
+  color: #00ffff;
+}
+
+.tech-tag-lg {
+  background: rgba(0, 255, 255, 0.08);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  padding: 0.4rem 1rem;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-family: 'JetBrains Mono', monospace;
+  color: #00dddd;
+}
+
+.tech-icon-group {
+  transition: all 0.2s;
+}
+
+.tech-icon-group:hover {
+  transform: translateY(-3px);
+  filter: drop-shadow(0 0 8px #00ffff);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00ffff;
+  border-radius: 10px;
+}
+
+/* Terminal Text Effect */
+.terminal-text {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); opacity: 0.6; }
+  50% { transform: translateY(8px); opacity: 1; }
+}
+
+/* Gradient Animation */
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  background-size: 200% auto;
+  animation: gradient 3s ease infinite;
+}
+
+/* Mobile Menu */
+.mobile-menu-cyber {
+  display: none;
+}
+
+.mobile-menu-cyber.open {
+  display: flex;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cyber-card, .cyber-card-holo {
+    backdrop-filter: blur(8px);
+  }
+  
+  .cyber-btn, .cyber-btn-outline {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
