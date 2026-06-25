@@ -171,27 +171,56 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('scroll', updateActiveNav);
   window.addEventListener('load', updateActiveNav);
 
-  // Form handler
-  const form = document.getElementById('contactForm');
-  const feedback = document.getElementById('formFeedback');
-  if (form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const msg = document.getElementById('message').value.trim();
-      if (name && email && msg) {
-        feedback.textContent = `✅ CONNECTION_ESTABLISHED: Thank you ${name}. Response incoming.`;
-        feedback.classList.remove('hidden');
-        form.reset();
-        setTimeout(() => feedback.classList.add('hidden'), 5000);
-      } else {
-        feedback.textContent = "⚠️ ERROR: Please complete all fields.";
-        feedback.classList.remove('hidden');
-        setTimeout(() => feedback.classList.add('hidden'), 3000);
-      }
-    });
+ // ============================================
+// CYBER POPUP FUNCTIONS
+// ============================================
+
+function showPopup(name) {
+  const popup = document.getElementById('cyberPopup');
+  const popupName = document.getElementById('popupName');
+  
+  if (popupName) {
+    popupName.textContent = name;
   }
+  
+  if (popup) {
+    popup.classList.remove('hidden');
+    // Prevent body scroll
+    document.body.style.overflow = 'hidden';
+    
+    // Auto-close after 6 seconds
+    setTimeout(function() {
+      closePopup();
+    }, 6000);
+  }
+}
+
+function closePopup() {
+  const popup = document.getElementById('cyberPopup');
+  if (popup) {
+    popup.classList.add('hidden');
+    // Re-enable body scroll
+    document.body.style.overflow = '';
+  }
+}
+
+// Close popup with Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closePopup();
+  }
+});
+
+// Close popup by clicking outside
+document.addEventListener('click', function(e) {
+  const popup = document.getElementById('cyberPopup');
+  if (popup && !popup.classList.contains('hidden')) {
+    const container = popup.querySelector('.cyber-popup-container');
+    if (container && !container.contains(e.target)) {
+      closePopup();
+    }
+  }
+});
 
   // Reinitialize icons
   if (typeof lucide !== 'undefined') {
@@ -250,29 +279,39 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Form handler
-  const form = document.getElementById('contactForm');
-  const feedback = document.getElementById('formFeedback');
-  if (form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const msg = document.getElementById('message').value.trim();
-      if (name && email && msg) {
-        feedback.textContent = `✅ Thank you ${name}! I'll reply soon.`;
-        feedback.classList.remove('hidden');
-        form.reset();
-        setTimeout(() => feedback.classList.add('hidden'), 5000);
-      } else {
-        feedback.textContent = "⚠️ Please fill all fields.";
-        feedback.classList.remove('hidden');
-        setTimeout(() => feedback.classList.add('hidden'), 3000);
-      }
-    });
-  }
+  // // Form handler
+  // const form = document.getElementById('contactForm');
+  // const feedback = document.getElementById('formFeedback');
+  // if (form) {
+  //   form.addEventListener('submit', (e) => {
+  //     e.preventDefault();
+  //     const name = document.getElementById('name').value.trim();
+  //     const email = document.getElementById('email').value.trim();
+  //     const msg = document.getElementById('message').value.trim();
+  //     if (name && email && msg) {
+  //       feedback.textContent = `✅ Thank you ${name}! I'll reply soon.`;
+  //       feedback.classList.remove('hidden');
+  //       form.reset();
+  //       setTimeout(() => feedback.classList.add('hidden'), 5000);
+  //     } else {
+  //       feedback.textContent = "⚠️ Please fill all fields.";
+  //       feedback.classList.remove('hidden');
+  //       setTimeout(() => feedback.classList.add('hidden'), 3000);
+  //     }
+  //   });
+  // }
 
-  if (typeof lucide !== 'undefined') {
-    setTimeout(() => lucide.createIcons(), 100);
-  }
+  // if (typeof lucide !== 'undefined') {
+  //   setTimeout(() => lucide.createIcons(), 100);
+  // }
+
+  // Form handler
+const form = document.getElementById('contactForm');
+const feedback = document.getElementById('formFeedback');
+if (form) {
+  form.addEventListener('submit', (e) => {
+    // ... form code ...
+  });
+}
+
 });

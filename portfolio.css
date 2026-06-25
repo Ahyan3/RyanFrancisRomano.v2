@@ -242,3 +242,258 @@ body {
     padding-right: 1.25rem;
   }
 }
+
+
+/* ============================================
+   CYBER POPUP MODAL
+   ============================================ */
+
+.cyber-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: popupFadeIn 0.4s ease-out;
+}
+
+.cyber-popup-overlay.hidden {
+  display: none;
+}
+
+@keyframes popupFadeIn {
+  from {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+  }
+  to {
+    opacity: 1;
+    backdrop-filter: blur(8px);
+  }
+}
+
+.cyber-popup-container {
+  position: relative;
+  background: rgba(8, 12, 30, 0.95);
+  border: 1px solid rgba(0, 255, 255, 0.4);
+  border-radius: 16px;
+  padding: 40px 48px;
+  max-width: 480px;
+  width: 90%;
+  box-shadow: 0 0 60px rgba(0, 255, 255, 0.15), inset 0 0 60px rgba(0, 255, 255, 0.03);
+  animation: popupScaleIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes popupScaleIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Glitch border effect */
+.cyber-popup-glitch {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 18px;
+  background: linear-gradient(45deg, #00ffff, #ff00ff, #00ffff, #ff00ff);
+  background-size: 300% 300%;
+  z-index: -1;
+  animation: glitchBorder 3s ease-in-out infinite;
+  opacity: 0.4;
+}
+
+@keyframes glitchBorder {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.cyber-popup-content {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Icon */
+.cyber-popup-icon {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+}
+
+.cyber-popup-icon-inner {
+  width: 80px;
+  height: 80px;
+  background: rgba(16, 185, 129, 0.1);
+  border: 2px solid rgba(16, 185, 129, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: popupIconPulse 2s ease-in-out infinite;
+}
+
+@keyframes popupIconPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(16, 185, 129, 0.4);
+  }
+}
+
+.cyber-popup-icon-ring {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 50%;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  animation: popupRingPulse 2s ease-in-out infinite;
+}
+
+@keyframes popupRingPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+}
+
+/* Title */
+.cyber-popup-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #00ffff;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  text-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+/* Message */
+.cyber-popup-message {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 15px;
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.cyber-popup-message #popupName {
+  color: #00ffff;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+/* Status Bar */
+.cyber-popup-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 8px 16px;
+  background: rgba(0, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.15);
+  border-radius: 30px;
+  margin-bottom: 24px;
+}
+
+.cyber-popup-status-dot {
+  width: 8px;
+  height: 8px;
+  background: #00ff88;
+  border-radius: 50%;
+  animation: popupDotBlink 1.5s ease-in-out infinite;
+}
+
+@keyframes popupDotBlink {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.6);
+  }
+  50% {
+    opacity: 0.3;
+    box-shadow: 0 0 5px rgba(0, 255, 136, 0.2);
+  }
+}
+
+.cyber-popup-status-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: #00ff88;
+  letter-spacing: 2px;
+}
+
+/* Close Button */
+.cyber-popup-btn {
+  position: relative;
+  background: transparent;
+  border: 1px solid rgba(0, 255, 255, 0.4);
+  border-radius: 8px;
+  padding: 12px 32px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.cyber-popup-btn:hover {
+  border-color: #00ffff;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.15);
+}
+
+.cyber-popup-btn-text {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 13px;
+  color: #00ffff;
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 1;
+}
+
+.cyber-popup-btn-glow {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.cyber-popup-btn:hover .cyber-popup-btn-glow {
+  left: 100%;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .cyber-popup-container {
+    padding: 30px 24px;
+  }
+  
+  .cyber-popup-title {
+    font-size: 15px;
+  }
+  
+  .cyber-popup-message {
+    font-size: 13px;
+  }
+}
