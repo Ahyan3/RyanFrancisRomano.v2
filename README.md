@@ -58,23 +58,24 @@ This is my personal portfolio website showcasing my work as a **Full-Stack Devel
 ---
 
 ## 📁 Project Structure
-2026ryanpoftfolio/
-├── index.html # Main portfolio page
-├── portfolio.css # Custom styles (cyberpunk theme)
-├── portfolio.js # Three.js background + carousel logic
-├── portfolio-fallback.js # Fallback for non-module browsers
-├── README.md # This file
-└── images/
-├── photo/ # Profile photos (5 images)
-├── projects/ # Project screenshots
-│ ├── mcevent/ # MCEvent gallery (13 images)
-│ ├── upitdc/ # UPITDC gallery
-│ ├── dental/ # Dental system gallery
-│ ├── student-mgmt/ # Student management gallery
-│ └── agri-bit/ # Agri-Bit gallery
-└── awards/ # Certification images (40+ files)
 
-text
+```
+2026ryanpoftfolio/
+├── index.html              # Main portfolio page
+├── portfolio.css           # Custom styles (cyberpunk theme)
+├── portfolio.js            # Three.js background + carousel logic
+├── portfolio-fallback.js   # Fallback for non-module browsers
+├── README.md               # This file
+└── images/
+    ├── photo/              # Profile photos (5 images)
+    ├── projects/           # Project screenshots
+    │   ├── mcevent/        # MCEvent gallery (13 images)
+    │   ├── upitdc/         # UPITDC gallery
+    │   ├── dental/         # Dental system gallery
+    │   ├── student-mgmt/   # Student management gallery
+    │   └── agri-bit/       # Agri-Bit gallery
+    └── awards/             # Certification images (40+ files)
+```
 
 ---
 
@@ -107,252 +108,114 @@ text
 npm install -g netlify-cli
 netlify login
 netlify deploy --prod
-GitHub Pages
-bash
+```
+
+### GitHub Pages
+```bash
 git add .
 git commit -m "feat: deploy portfolio"
 git push origin main
-🔧 Local Development
-Clone the repository
-
-bash
-git clone https://github.com/Ahyan3/RyanFrancisRomano.v2.git
-cd RyanFrancisRomano.v2
-Open in browser
-
-bash
-# Open index.html directly
-start index.html
-# Or use Live Server in VS Code
-File Structure Requirements
-
-Ensure images/ folder contains all assets
-
-Check image paths match the HTML references
-
-📊 Dependencies
-Dependency	Version	Purpose
-Three.js	0.128.0	3D Background
-Tailwind CSS	Latest	Utility-first CSS
-Lucide Icons	Latest	Icon library
-Google Fonts	N/A	Orbitron, Space Grotesk, JetBrains Mono
-📝 Certificate & Award Categories
-2026
-AI Class ASEAN – Certificate of Completion
-
-Typing Certification – 46 WPM • 100% Accuracy
-
-Graphic Designer of the Year
-
-Best in UX/UI Prototyping
-
-Best in Research (2nd Runner Up)
-
-Best in Thesis (2nd Runner Up)
-
-CCS EXPO Hackathon (2nd Runner Up)
-
-Cum Laude (Latin Honor)
-
-2025
-JavaScript Essentials 2 – Cisco
-
-240-Hour OJT – UP ITDC
-
-Best in PL101 Programming Language
-
-Best in Video Processing
-
-TESDA Computer System Servicing NC II
-
-TESDA Visual Graphic Design NC III
-
-TESDA Electrical Installation NC II
-
-TESDA Content Creation Level III
-
-2024
-System Dev Awards (1st Runner-up)
-
-📞 Contact
-Platform	Link
-Portfolio	ryanfrancisromanov2.netlify.app
-Email	ahyanromano02@gmail.com
-GitHub	github.com/Ahyan3
-LinkedIn	linkedin.com/in/ahyan-romano-ph
-Facebook	facebook.com/ryanfrancisromano
-📄 License
-© 2025 Ryan Francis Camacho Romano. All rights reserved.
-
-🙏 Acknowledgments
-Mabini Colleges, Inc. – Academic institution
-
-University of the Philippines ITDC – OJT host
-
-Cisco Networking Academy – JavaScript certification
-
-TESDA – Technical certifications
-
-💡 "The Master doesn't talk, he acts." – Lao Tzu
-⬆ Back to Top
-
-text
+```
 
 ---
 
-## 📄 **Version 2: README.txt (Local Folder)**
-================================================================================
-RYAN FRANCIS CAMACHO ROMANO
-PORTFOLIO v2.0
-================================================================================
+## 🔧 Local Development
 
-📁 FOLDER: 2026ryanpoftfolio
-📅 DATE: June 2026
-🌐 LIVE: https://ryanfrancisromanov2.netlify.app
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Ahyan3/RyanFrancisRomano.v2.git
+   cd RyanFrancisRomano.v2
+   ```
 
-================================================================================
-ABOUT THIS PORTFOLIO
-================================================================================
+2. **Open in browser**
+   ```bash
+   # Open index.html directly
+   start index.html
+   # Or use Live Server in VS Code
+   ```
 
-This is my personal portfolio website showcasing my work as a Full-Stack
-Developer, UI/UX Designer, and Computer Science Graduate. Built with a
-cyberpunk/neon aesthetic featuring a 3D interactive background.
+3. **File Structure Requirements**
+   - Ensure `images/` folder contains all assets
+   - Check image paths match the HTML references
 
-================================================================================
-FOLDER STRUCTURE
-================================================================================
+---
 
-2026ryanpoftfolio/
-├── index.html # Main portfolio page
-├── portfolio.css # Custom styles (cyberpunk theme)
-├── portfolio.js # Three.js background + carousel logic
-├── portfolio-fallback.js # Fallback for non-module browsers
-├── README.md # GitHub README file
-├── README.txt # This file
-└── images/
-├── photo/ # Profile photos (5 images)
-├── projects/ # Project screenshots
-│ ├── mcevent/ # MCEvent gallery (13 images)
-│ ├── upitdc/ # UPITDC gallery
-│ ├── dental/ # Dental system gallery
-│ ├── student-mgmt/ # Student management gallery
-│ └── agri-bit/ # Agri-Bit gallery
-└── awards/ # Certification images (40+ files)
+## 📊 Dependencies
 
-================================================================================
-KEY FEATURES
-================================================================================
+| Dependency | Version | Purpose |
+|------------|---------|---------|
+| Three.js | 0.128.0 | 3D Background |
+| Tailwind CSS | Latest | Utility-first CSS |
+| Lucide Icons | Latest | Icon library |
+| Google Fonts | N/A | Orbitron, Space Grotesk, JetBrains Mono |
 
-🖥️ User Experience:
-• 3D Interactive Background – Animated torus knot with particles
-• Full-Screen Carousel – 1920x1080 optimized image gallery
-• Responsive Design – Works on all devices
-• Smooth Scrolling – Navigation between sections
-• Glassmorphism Effects – Cyber-themed cards with blur
+---
 
-📱 Sections:
-• Hero – Terminal-style introduction with typing effect
-• About – Identity matrix + interactive profile carousel
-• Projects – Featured projects with gallery carousels
-• Tech Stack – Visual technology icons with hover descriptions
-• Certifications – Organized by year (2026, 2025, 2024)
-• Leadership – Student leadership roles and seminars
-• Contact – Formspree integration with cyber popup feedback
+## 📝 Certificate & Award Categories
 
-================================================================================
-GALLERY INFORMATION
-================================================================================
+### 2026
+- AI Class ASEAN – Certificate of Completion
+- Typing Certification – 46 WPM • 100% Accuracy
+- Graphic Designer of the Year
+- Best in UX/UI Prototyping
+- Best in Research (2nd Runner Up)
+- Best in Thesis (2nd Runner Up)
+- CCS EXPO Hackathon (2nd Runner Up)
+- Cum Laude (Latin Honor)
 
-PROJECTS:
-• MCEvent – Automated Event Management System (13 screenshots)
-• UPITDC Inventory – Inventory Management System
-• Balane-Saspa Dental – Appointment Scheduling System
-• Student Management – Desktop Application
-• Agri-Bit Mobile – Mobile Application
+### 2025
+- JavaScript Essentials 2 – Cisco
+- 240-Hour OJT – UP ITDC
+- Best in PL101 Programming Language
+- Best in Video Processing
+- TESDA Computer System Servicing NC II
+- TESDA Visual Graphic Design NC III
+- TESDA Electrical Installation NC II
+- TESDA Content Creation Level III
 
-CERTIFICATIONS (2026):
-• AI Class ASEAN – Certificate of Completion
-• Typing Certification – 46 WPM • 100% Accuracy
-• Graphic Designer of the Year
-• Best in UX/UI Prototyping
-• Best in Research (2nd Runner Up)
-• Best in Thesis (2nd Runner Up)
-• CCS EXPO Hackathon (2nd Runner Up)
-• Cum Laude (Latin Honor)
+### 2024
+- System Dev Awards (1st Runner-up)
 
-CERTIFICATIONS (2025):
-• JavaScript Essentials 2 – Cisco
-• 240-Hour OJT – UP ITDC
-• Best in PL101 Programming Language
-• Best in Video Processing
-• TESDA Computer System Servicing NC II
-• TESDA Visual Graphic Design NC III
-• TESDA Electrical Installation NC II
-• TESDA Content Creation Level III
+---
 
-CERTIFICATIONS (2024):
-• System Dev Awards (1st Runner-up)
+## 🛠️ Technical Skills
 
-================================================================================
-TECHNICAL SKILLS
-================================================================================
+- **Languages:** PHP, Java, Python, JavaScript, TypeScript, Kotlin
+- **Frontend:** React.js, Tailwind CSS, HTML5, CSS3, Bootstrap
+- **Backend:** Node.js, Express.js, Laravel
+- **Database:** MySQL, PostgreSQL, Supabase
+- **Tools:** Git, GitHub, Figma, Canva, VS Code
+- **Design:** UI/UX, Wireframing, Prototyping, Graphic Design
 
-Languages: PHP, Java, Python, JavaScript, TypeScript, Kotlin
-Frontend: React.js, Tailwind CSS, HTML5, CSS3, Bootstrap
-Backend: Node.js, Express.js, Laravel
-Database: MySQL, PostgreSQL, Supabase
-Tools: Git, GitHub, Figma, Canva, VS Code
-Design: UI/UX, Wireframing, Prototyping, Graphic Design
+---
 
-================================================================================
-DEPLOYMENT
-================================================================================
+## 📞 Contact
 
-Netlify Deployment:
+| Platform | Link |
+|----------|------|
+| Portfolio | [ryanfrancisromanov2.netlify.app](https://ryanfrancisromanov2.netlify.app) |
+| Email | ahyanromano02@gmail.com |
+| GitHub | [github.com/Ahyan3](https://github.com/Ahyan3) |
+| LinkedIn | [linkedin.com/in/ahyan-romano-ph](https://linkedin.com/in/ahyan-romano-ph) |
+| Facebook | [facebook.com/ryanfrancisromano](https://facebook.com/ryanfrancisromano) |
 
-Go to https://app.netlify.com/drop
+---
 
-Drag and drop the entire 2026ryanpoftfolio folder
-
-Netlify will generate a URL: https://your-site.netlify.app
-
-GitHub Deployment:
-
-git add .
-
-git commit -m "feat: deploy portfolio"
-
-git push origin main
-
-================================================================================
-CONTACT
-================================================================================
-
-📧 Email: ahyanromano02@gmail.com
-🌐 Portfolio: https://ryanfrancisromanov2.netlify.app
-💻 GitHub: https://github.com/Ahyan3
-🔗 LinkedIn: https://linkedin.com/in/ahyan-romano-ph
-📘 Facebook: https://www.facebook.com/ryanfrancisromano
-
-================================================================================
-ACKNOWLEDGMENTS
-================================================================================
-
-• Mabini Colleges, Inc. – Academic institution
-• University of the Philippines ITDC – OJT host
-• Cisco Networking Academy – JavaScript certification
-• TESDA – Technical certifications
-
-================================================================================
-LICENSE
-================================================================================
+## 📄 License
 
 © 2025 Ryan Francis Camacho Romano. All rights reserved.
 
-================================================================================
-QUOTE
-================================================================================
+---
 
-💡 "The Master doesn't talk, he acts." – Lao Tzu
+## 🙏 Acknowledgments
 
-================================================================================
+- Mabini Colleges, Inc. – Academic institution
+- University of the Philippines ITDC – OJT host
+- Cisco Networking Academy – JavaScript certification
+- TESDA – Technical certifications
+
+---
+
+💡 *"The Master doesn't talk, he acts."* – Lao Tzu
+
+[⬆ Back to Top](#-ryan-francis-camacho-romano--portfolio-v20)
