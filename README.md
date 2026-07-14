@@ -203,7 +203,7 @@ git push origin main
 
 ## 📄 License
 
-© 2025 Ryan Francis Camacho Romano. All rights reserved.
+© 2026 Ryan Francis Camacho Romano. All rights reserved.
 
 ---
 
@@ -212,7 +212,7 @@ git push origin main
 - Mabini Colleges, Inc. – Academic institution
 - University of the Philippines ITDC – OJT host
 - Cisco Networking Academy – JavaScript certification
-- TESDA – Technical certifications
+- TESDA Online Program – Technical certifications
 
 ---
 
